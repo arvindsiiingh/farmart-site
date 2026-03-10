@@ -1,3 +1,4 @@
+import { HugeiconsIcon } from '@hugeicons/react';
 import { InstagramIcon, Linkedin01Icon, NewTwitterIcon, YoutubeIcon } from '@hugeicons/core-free-icons';
 import { motion as Motion } from 'framer-motion';
 import farmartLightLogo from '../assets/farmart logo light.png';
@@ -57,7 +58,7 @@ export default function Footer({ activeLegalLink }) {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="text-balance text-4xl font-extrabold leading-[1.1] tracking-tight sm:text-5xl text-white">
+          <h2 className="text-balance text-3xl font-extrabold leading-[1.1] tracking-tight sm:text-4xl md:text-5xl text-white">
             Stay informed on food sourcing &amp; supply chain trends
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-pretty text-lg leading-relaxed text-brand-cream/50 font-light">
@@ -113,7 +114,7 @@ export default function Footer({ activeLegalLink }) {
                     aria-label={link.label}
                     className="group/social inline-flex items-center gap-2.5 rounded-full border border-white/10 bg-white/[0.03] px-4 py-2 text-[13px] text-brand-cream/55 transition-all duration-300 hover:border-brand-harvest/35 hover:bg-white/[0.06] hover:text-white"
                   >
-                    <hugeicons
+                    <HugeiconsIcon
                       icon={link.icon}
                       size={16}
                       className="text-brand-harvest/75 transition-transform duration-300 group-hover/social:-translate-y-0.5"

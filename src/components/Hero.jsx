@@ -4,7 +4,7 @@ import { motion as Motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-brand-cream min-h-screen flex flex-col justify-center">
+        <section className="relative overflow-hidden bg-brand-cream min-h-screen flex flex-col justify-center pt-[140px] pb-12">
             {/* Minimalist, precise background gradients (Sarvam/Stripe style) */}
             <div className="absolute top-0 inset-x-0 h-[600px] overflow-hidden pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-full">
@@ -23,7 +23,7 @@ export default function Hero() {
                     transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h1 className="text-[clamp(2.75rem,8vw,5rem)] font-extrabold text-brand-ink tracking-tight leading-[0.95] text-balance mb-10">
+                    <h1 className="text-[clamp(2.75rem,8vw,5rem)] font-extrabold text-brand-ink tracking-tight leading-[0.95] text-balance mb-6 sm:mb-10">
                         India’s Most Trusted Food Sourcing Network
                     </h1>
                 </Motion.div>
@@ -33,7 +33,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
                 >
-                    <p className="text-lg md:text-[1.35rem] lg:text-[1.2rem] text-slate-700 mb-16 max-w-2xl mx-auto text-pretty leading-[1.6] font-light opacity-90">
+                    <p className="text-lg md:text-[1.35rem] lg:text-[1.2rem] text-slate-700 mb-8 sm:mb-16 max-w-2xl mx-auto text-pretty leading-[1.6] font-light opacity-90">
                         From farm to factory - FarMart connects buyers, suppliers, and logistics in one trusted platform.
                     </p>
                 </Motion.div>
@@ -42,12 +42,12 @@ export default function Hero() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.3, ease: "easeOut" }}
-                    className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 w-full sm:w-auto"
+                    className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto"
                 >
-                    <button className="w-full sm:w-auto px-8 py-4 btn-premium text-white font-bold transition-all flex items-center justify-center gap-3 group text-lg">
+                    <button className="w-full sm:w-auto px-8 py-3.5 sm:py-4 btn-premium text-white font-bold transition-all flex items-center justify-center gap-3 group text-base sm:text-lg">
                         Start sourcing
                     </button>
-                    <button className="w-full sm:w-auto px-9 py-4 bg-white/80 text-brand-ink border-2 border-slate-200/50 backdrop-blur-sm font-bold transition-all flex items-center justify-center gap-3 group text-lg hover:border-brand-mint/50">
+                    <button className="w-full sm:w-auto px-9 py-3.5 sm:py-4 bg-white/80 text-brand-ink border-2 border-slate-200/50 backdrop-blur-sm font-bold transition-all flex items-center justify-center gap-3 group text-base sm:text-lg hover:border-brand-mint/50">
                         See how it works
                         <HugeiconsIcon icon={ArrowRight} size={20} />
                     </button>
