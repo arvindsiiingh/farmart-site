@@ -82,7 +82,7 @@ export default function SupplierTrust() {
                             <Motion.div
                                 variants={itemVariants}
                                 key={index}
-                                className="bg-brand-ink border p- lg:p-12 flex flex-col sm:flex-row gap-8 items-start hover:border-brand-mint/40 transition-colors " style={{ borderColor: '#323734' }}
+                                className="bg-brand-ink border p-6 sm:p-8 lg:p-12 flex flex-col sm:flex-row gap-6 sm:gap-8 items-start hover:border-brand-mint/40 transition-colors" style={{ borderColor: '#323734' }}
                             >
                                 <div className="shrink-0 w-12 h-12 flex items-center justify-center bg-brand-cream text-brand-ink shadow-lg">
                                     <HugeiconsIcon icon={feature.icon} size={28} strokeWidth={1.6} />
