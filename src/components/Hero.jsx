@@ -4,7 +4,7 @@ import { motion as Motion } from 'framer-motion';
 
 export default function Hero() {
     return (
-        <section className="relative overflow-hidden bg-brand-cream min-h-screen flex flex-col justify-center py-20">
+        <section className="relative overflow-hidden bg-brand-cream min-h-screen flex flex-col justify-center">
             {/* Minimalist, precise background gradients (Sarvam/Stripe style) */}
             <div className="absolute top-0 inset-x-0 h-[600px] overflow-hidden pointer-events-none">
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-[1400px] h-full">
@@ -18,26 +18,12 @@ export default function Hero() {
             <div className="max-w-[1240px] mx-auto px-6 sm:px-8 lg:px-12 relative z-10 flex flex-col items-center justify-center text-center">
 
                 <Motion.div
-                    initial={{ opacity: 0, scale: 0.95, y: -10 }}
-                    animate={{ opacity: 1, scale: 1, y: 0 }}
-                    transition={{ duration: 0.5, ease: "easeOut" }}
-                >
-                    <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/75 backdrop-blur-md border border-brand-mint/60 text-brand-ink font-medium text-sm mb-12 ring-1 ring-brand-mint/40">
-                        <span className="flex h-2 w-2 relative">
-                            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-mint opacity-75"></span>
-                            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
-                        </span>
-                        India's #1 food sourcing platform
-                    </div>
-                </Motion.div>
-
-                <Motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
                     className="max-w-4xl mx-auto"
                 >
-                    <h1 className="text-[clamp(2.75rem,8vw,6rem)] font-extrabold text-brand-ink tracking-tight leading-[0.95] text-balance mb-10">
+                    <h1 className="text-[clamp(2.75rem,8vw,5rem)] font-extrabold text-brand-ink tracking-tight leading-[0.95] text-balance mb-10">
                         India’s Most Trusted Food Sourcing Network
                     </h1>
                 </Motion.div>
