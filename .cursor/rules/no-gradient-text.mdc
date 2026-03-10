@@ -1,0 +1,18 @@
+---
+description: Disallow gradient text styles across the project
+alwaysApply: true
+---
+
+# No gradient text (global)
+
+- Do **not** use gradient fills for text anywhere in the project.
+- Do **not** mix multiple text colors within the same sentence/headline (avoid styling different words with different `text-*` colors).
+- Avoid these patterns (or anything equivalent):
+  - `text-transparent`
+  - `bg-clip-text`
+  - `bg-gradient-to-*` on text elements
+
+## Preferred alternatives
+
+- Use **solid brand tones** for emphasis (e.g. `text-brand-700`, `text-brand-600`) instead of gradient text.
+- If you need emphasis, prefer **weight**, **tracking**, **underline/decoration**, or **subtle background chip** behind text.

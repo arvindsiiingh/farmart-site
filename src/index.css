@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+
+  /* Farmart brand scale */
+  /* Brand base: #1B4642 */
+  --color-brand-50: #edf4f3;
+  --color-brand-100: #d4e6e4;
+  --color-brand-200: #a9cecb;
+  --color-brand-300: #7fb6b1;
+  --color-brand-400: #569e98;
+  --color-brand-500: #2f7772;
+  --color-brand-600: #1b4642;
+  --color-brand-700: #163a37;
+  --color-brand-800: #112f2c;
+  --color-brand-900: #0d2422;
+  --color-brand-950: #071615;
+
+  /* Farmart core palette */
+  --color-brand-cream: #faf7ef;
+  --color-brand-ink: #242725;
+  --color-brand-harvest: #efda86;
+  --color-brand-mint: #aed2c0;
+
+  /* Approved palette pairings (background/foreground) */
+  --color-brand-pair-dark-bg: #242725;
+  --color-brand-pair-dark-fg: #faf7ef;
+  --color-brand-pair-cream-bg: #faf7ef;
+  --color-brand-pair-cream-fg: #242725;
+  --color-brand-pair-cream-primary-bg: #faf7ef;
+  --color-brand-pair-cream-primary-fg: #1b4642;
+  --color-brand-pair-primary-bg: #1b4642;
+  --color-brand-pair-primary-fg: #faf7ef;
+  --color-brand-pair-mint-bg: #aed2c0;
+  --color-brand-pair-mint-fg: #1b4642;
+  --color-brand-pair-harvest-bg: #efda86;
+  --color-brand-pair-harvest-fg: #1b4642;
+
+  --color-slate-900: #0a0f1a;
+  --color-slate-800: #131b2c;
+  --color-slate-700: #1f2b42;
+  --color-slate-600: #334155;
+  --color-slate-50: #f8fafc;
+
+  /* Typography Scale */
+  --font-size-hero: 5.5rem;
+  --font-size-h1: 4.5rem;
+  --font-size-h2: 3.5rem;
+  --font-size-h3: 2.25rem;
+  --font-size-h4: 1.5rem;
+
+  /* Spacing Scale */
+  --spacing-section: 8rem;
+  --spacing-section-mobile: 5rem;
+  --spacing-component: 4rem;
+}
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: white;
+    color: var(--color-slate-900);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Utilities for text balance and prettying */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-pretty {
+    text-wrap: pretty;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+  }
+
+  .bg-grid-pattern {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  .ticker {
+    display: inline-flex;
+    min-width: max-content;
+    animation: ticker-scroll 28s linear infinite;
+  }
+
+  .btn-premium {
+    @apply relative overflow-hidden transition-all duration-300 transform active:scale-[0.98];
+    background: var(--color-brand-600);
+    box-shadow: 0 4px 14px 0 rgba(27, 70, 66, 0.25);
+  }
+
+  .btn-premium:hover {
+    @apply opacity-90;
+    background: var(--color-brand-700);
+  }
+}
+
+@keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ticker {
+    animation: none;
+  }
+}
